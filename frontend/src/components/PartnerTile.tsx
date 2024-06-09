@@ -69,6 +69,8 @@ export default function PartnerTile({
                             onChange={(e) => setActive(e.target.checked)}
                         />
                     ) : active ? (
+                        // this is a bit ugly, but this is what makes prettier happy in this instance
+                        // and fighting it is a pain
                         "Yes"
                     ) : (
                         "No"
