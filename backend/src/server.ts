@@ -27,8 +27,9 @@ if (partners.length === 0) {
     });
 }
 
-process.on("exit", async () => {
+process.on("exit", () => {
     console.log(JSON.stringify(partners, null, 4));
+    // exit handler doesn't like async operations
     writeFileSync(DATA_FILE, JSON.stringify(partners, null, 4));
 });
 
