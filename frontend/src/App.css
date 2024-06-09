@@ -1,13 +1,11 @@
-/* 
-  ================
-  COMPONENT STYLES
-  ================
-*/
-
-/* MainDisplay */
+:root {
+    --font: Helvetica, sans-serif;
+    --rem: 18px;
+    font-family: var(--font);
+    font-size: var(--rem);
+}
 
 #main-content {
-    width: 1000px;
     padding: 20px 30px;
     margin: auto;
 }
@@ -24,15 +22,12 @@
 h1.title {
     text-align: center;
     font-size: 24pt;
-
     padding-bottom: 25px;
 }
 
-/* PartnerTile */
-
 .partner-tile {
-    width: 450px;
-    height: 400px;
+    width: min(768px, 100%);
+    height: max-content;
 
     display: flex;
     flex-direction: column;
@@ -48,8 +43,75 @@ h1.title {
 .partner-thumbnail {
     max-width: 330px;
     max-height: 150px;
+    margin-bottom: 0.5rem;
 }
 
-.partner-info {
-    font-size: 0.9em;
+.partner-tile > dl {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: self-start;
+    gap: 0.5rem 1rem;
+    width: 100%;
+}
+
+.partner-tile > dl > dt {
+    width: 100%;
+    font-weight: bold;
+}
+
+.partner-tile > dl :is(dd, dd > p) {
+    margin: 0;
+}
+
+.partner-buttons {
+    display: flex;
+    flex-direction: flex-row;
+    gap: 0.5rem;
+}
+
+:is(.partner-edit, .partner-save) {
+    background-color: white;
+    border: 1px solid rgb(51, 99, 194);
+    color: rgb(51, 99, 194);
+    border-radius: 5px;
+    padding: 0.5rem;
+    transition: all ease 100ms;
+}
+
+:is(.partner-edit, .partner-save):hover {
+    background-color: rgb(66, 138, 239);
+    color: white;
+}
+
+.partner-delete {
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 0.543rem;
+    padding: 0.5rem;
+    transition: all ease 100ms;
+}
+
+.partner-delete:hover {
+    background-color: rgb(189, 38, 38);
+}
+
+.partner-tile :is(input, textarea) {
+    font-family: var(--font);
+    font-size: var(--rem);
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.partner-tile input[type="text"] {
+    width: 100%;
+}
+
+.partner-tile textarea {
+    position: relative;
+    width: min(600px, 100%);
+    height: 10rem;
+    resize: none;
 }

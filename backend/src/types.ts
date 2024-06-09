@@ -1,7 +1,8 @@
 export interface PartnerDetails {
-    thumbnailUrl: string;
     name: string;
+    logoUrl: string;
     description: string;
+    active: boolean;
 }
 
 export type PartnerData = Record<string, PartnerDetails>;
