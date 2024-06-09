@@ -1,8 +1,9 @@
 {
-    "name": "c4c-challenge-ts",
+    "name": "c4c-partners",
     "private": true,
     "version": "0.0.0",
     "type": "module",
+    "license": "AGPL-3.0-or-later",
     "scripts": {
         "frontend": "vite",
         "backend": "nodemon backend/src/server.ts",
