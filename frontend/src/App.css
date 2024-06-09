@@ -6,8 +6,11 @@
 }
 
 #main-content {
-    padding: 20px 30px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
 }
 
 #main-partners-grid {
@@ -22,7 +25,15 @@
 h1.title {
     text-align: center;
     font-size: 24pt;
-    padding-bottom: 25px;
+    margin-bottom: 0;
+}
+
+.search {
+    margin: 1rem auto;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: min(768px, 100%);
 }
 
 .partner-tile {
@@ -69,7 +80,7 @@ h1.title {
     gap: 0.5rem;
 }
 
-:is(.partner-edit, .partner-save) {
+:is(.partner-edit, .partner-save, .new-partner) {
     background-color: white;
     border: 1px solid rgb(51, 99, 194);
     color: rgb(51, 99, 194);
@@ -78,9 +89,24 @@ h1.title {
     transition: all ease 100ms;
 }
 
-:is(.partner-edit, .partner-save):hover {
+:is(.partner-edit, .partner-save, .new-partner):hover {
     background-color: rgb(66, 138, 239);
     color: white;
+}
+
+.new-partner {
+    width: max-content;
+    margin: 1rem auto;
+}
+
+.new-partner:disabled {
+    background-color: gainsboro;
+    border-color: black;
+    color: black;
+}
+
+.new-partner:disabled:hover {
+    color: black;
 }
 
 .partner-delete {

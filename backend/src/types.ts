@@ -4,5 +4,3 @@ export interface PartnerDetails {
     description: string;
     active: boolean;
 }
-
-export type PartnerData = Record<string, PartnerDetails>;

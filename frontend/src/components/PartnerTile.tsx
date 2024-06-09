@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { PartnerDetails } from "../types";
+import type { PartnerDetails } from "../../../backend/src/types";
 
 interface PartnerTileProps {
     partnerData: PartnerDetails;
