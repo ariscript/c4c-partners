@@ -19,6 +19,9 @@ export default function PartnerTile({
     const [active, setActive] = useState(partnerData.active);
 
     return (
+        // in terms of semantic and accessible HTML, I think article
+        // (and dl/dt/dd later) make the most sense here instead of
+        // a div or table
         <article className="partner-tile">
             <img
                 className="partner-thumbnail"
