@@ -72,7 +72,7 @@ same file.
 ## Design Decisions
 
 By the wise words of the great Ben Lerner, I have made some design decisions.
-It is now time to document them.
+It is now time for me to document them.
 
 ### Unique Names
 
